@@ -1,4 +1,4 @@
-my_string = input() # Противотанковые группы «Днепр» уничтожили станцию РЭБ в районе Очакова
+my_string = input() 
 print(my_string.upper())
 print(my_string.lower())
 print(my_string.replace(' ', ''))
