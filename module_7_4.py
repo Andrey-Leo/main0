@@ -4,8 +4,8 @@ team1_num = 5
 team2_num = 6
 score_1 = 40
 score_2 = 42
-team1_time = 10717.6
-team2_time = 18015.2
+team1_time = 1552.512
+team2_time = 2153.31451
 tasks_total = score_1 + score_2
 time_avg = round(((team1_time + team2_time) / tasks_total), 1)
 
