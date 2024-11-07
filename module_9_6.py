@@ -5,5 +5,5 @@ def all_variants(text):
 
 
 a = all_variants("abc")
-for i in a:
+for i in sorted(a, key=len):
     print(i)
