@@ -6,7 +6,7 @@ def introspection_info(obj):
 
     obj_attrs = [attr for attr in dir(obj) if not callable(getattr(obj, attr))] # Получаем атрибуты объекта
 
-    obj_methods = [method for method in obj_attrs if callable(getattr(obj, method))] # Получаем методы объекта
+    obj_methods = [method for method in dir(obj) if callable(getattr(obj, method))] # Получаем методы объекта
 
     obj_module = inspect.getmodule(obj) # Получаем модуль, к которому принадлежит объект
 
