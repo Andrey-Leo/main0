@@ -4,7 +4,7 @@ import inspect
 def introspection_info(obj):
     obj_type = type(obj) # Получаем тип объекта
 
-    obj_attrs = dir(obj) # Получаем атрибуты объекта
+    obj_attrs = [attr for attr in dir(obj) if not callable(getattr(obj, attr))] # Получаем атрибуты объекта
 
     obj_methods = [method for method in obj_attrs if callable(getattr(obj, method))] # Получаем методы объекта
 
