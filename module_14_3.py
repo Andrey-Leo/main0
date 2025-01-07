@@ -5,7 +5,6 @@ from aiogram.types import ReplyKeyboardMarkup, KeyboardButton
 from aiogram.types import InlineKeyboardMarkup, InlineKeyboardButton
 import asyncio
 
-from pyexpat.errors import messages
 
 api = ''
 bot = Bot(token=api)
