@@ -26,7 +26,8 @@ kb = ReplyKeyboardMarkup(resize_keyboard=True)
 button1 = KeyboardButton(text='Рассчитать')
 button2 = KeyboardButton(text='Информация')
 button3 = KeyboardButton(text='Купить')
-kb.add(button1, button2, button3)
+kb.add(button1, button2)
+kb.add(button3)
 
 
 @dp.message_handler(commands=['start'])
