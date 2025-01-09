@@ -33,6 +33,11 @@ kb.add(button3)
 kb.add(button4)
 
 
+@dp.message_handler(commands=['start'])
+async def start(message):
+    await message.answer('Привет! Я бот помогающий твоему здоровью.', reply_markup=kb)
+
+
 class RegistrationState(StatesGroup, State):
     username = State()
     email = State()
@@ -73,11 +78,6 @@ async def set_age(message, state):
     add_user(data['username'], data['email'], data['age'])
     await message.answer('Регистрация прошла успешно!')
     await state.finish()
-
-
-@dp.message_handler(commands=['start'])
-async def start(message):
-    await message.answer('Привет! Я бот помогающий твоему здоровью.', reply_markup=kb)
 
 
 @dp.message_handler(text='Рассчитать')
