@@ -3,20 +3,20 @@ from fastapi import FastAPI
 app = FastAPI()
 
 @app.get("/")
-async def root():
-    return {"Главная страница"}
+async def root() -> str:
+    return "Главная страница"
 
 @app.get("/user/admin")
-async def admin():
-    return {"Вы вошли как администратор"}
+async def admin() -> str:
+    return "Вы вошли как администратор"
 
 @app.get("/user/{user_id}")
-async def get_user(user_id: int) -> dict:
-    return {"Вы вошли как пользователь №": user_id}
+async def get_user(user_id: int) -> str:
+    return f"Вы вошли как пользователь №: {user_id}"
 
 @app.get("/user/{username}/{age}")
-async def user_name(username: str, age: int) -> dict:
-    return {"Информация о пользователе": f"Имя: {username}, Возраст: {age}"}
+async def user_name(username: str, age: int) -> str:
+    return f"Информация о пользователе: Имя: {username}, Возраст: {age}"
 
 
 
