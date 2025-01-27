@@ -1,8 +1,7 @@
-from fastapi import FastAPI, Request, HTTPException, Path
+from fastapi import FastAPI, Request, HTTPException
 from fastapi.responses import HTMLResponse
 from pydantic import BaseModel
 from fastapi.templating import Jinja2Templates
-from typing import Annotated, List
 
 app = FastAPI(swagger_ui_parameters={"tryItOutEnabled": True}, debug=True)
 
