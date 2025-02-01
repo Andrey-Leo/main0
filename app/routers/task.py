@@ -1,4 +1,6 @@
 from fastapi import APIRouter
+from sqlalchemy import Column, Integer, String
+from app.backend.db import Base
 
 router = APIRouter(prefix="/task", tags=["task"])
 
