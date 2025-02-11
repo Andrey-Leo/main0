@@ -18,7 +18,8 @@ from django.contrib import admin
 from django.urls import path
 # from task2.views import index, Index2, main
 # from task3.views import platform, games, cart
-from task4.views import platform, games, cart
+# from task4.views import platform, games, cart
+from task5.views import sign_up_by_html, sign_up_by_django
 
 
 # urlpatterns = [
@@ -29,8 +30,10 @@ from task4.views import platform, games, cart
 # ]
 
 urlpatterns = [
-    path('admin/', admin.site.urls),
-    path('platform/', platform, name='platform'),
-    path('games/', games, name='games'),
-    path('cart/', cart, name='cart'),
+    # path('admin/', admin.site.urls),
+    # path('platform/', platform, name='platform'),
+    # path('games/', games, name='games'),
+    # path('cart/', cart, name='cart'),
+    path('', sign_up_by_html, name='sign_up_by_html'),
+    path('django_sign_up/', sign_up_by_django, name='sign_up_by_django'),
 ]
