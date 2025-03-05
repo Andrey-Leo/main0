@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>игры</title>
+</head>
+<body>
+    <h1>Игры</h1>
+    <ul>
+        {% for game in name_game %}
+            <li>{{ game }} | {{ game.description }}. Стоимость: {{ game.cost }}
+                <button>Купить</button>
+        {% endfor %}
+    </ul>
+    <a href="http://127.0.0.1:8000/platform/"><button>Вернуться на главную</button></a>
+</body>
+</html>
